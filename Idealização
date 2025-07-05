@@ -1,0 +1,20 @@
+criar um painel com dados estatísticos
+
+dados:
+a: número cliente
+b: nome cliente
+c: valor do débito
+d: vencimento do débito mais antigo
+e: está em cobrança judicial sim ou não 
+f: número pasta
+
+Processo:
+abrir a planilha com dados de clientes;
+utilizando o número do cliente da coluna A consulte a coluna C e se tiver valor > 0 informe "inadimplente" na coluna G, caso contrário informe "adimplente";
+crie um gráfico pizza com a quantidade de clientes adimplentes e clientes inadimplentes;
+mostre um card com a porcentagem total de clientes adimplentes e inadimplentes;
+apresentes uma tabela com os 10 clientes com débitos mais antigos;
+mostre um gráfico com a porcentagem de clientes judicializados e não judicializados;
+
+
+
