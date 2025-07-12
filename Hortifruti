@@ -1,0 +1,41 @@
+estoque = [ "maçã","maçã","maçã", "banana", "laranja", "pera", "morango", "uva","uva","uva","uva", "manga", "abacaxi", "morango", "melancia", "kiwi",
+        "pêssego", "limão", "tangerina", "goiaba", "caju", "maracujá", "acerola", "graviola", "jabuticaba", "mamão",
+        "pitanga", "ameixa", "figo", "coco", "nectarina", "damasco", "lichia", "framboesa", "mirtilo", "amora",
+        "carambola", "pera-asiática", "romã", "caqui", "physalis", "kumquat", "sapoti", "abiu", "ata", "biribá",
+        "butiá", "cupuaçu", "jenipapo", "jambo", "longan", "mangostão", "pequi", "umbu", "yuzu", "araçá","seriguela", 
+        "tamara", "tomate", "cenoura", "batata", "alface", "espinafre", "brócolis", "couve", "pepino",
+        "abobrinha", "berinjela", "pimentão", "chuchu", "mandioca", "inhame", "quiabo", "rabanete", "beterraba", "agrião",
+        "rúcula", "salsão", "acelga","maçã","maçã","maçã", "alcachofra", "ervilha", "vagem", "milho", "abóbora", "aspargo", "alho-poró",
+        "cebola", "alho", "gengibre", "batata-doce","maçã","maçã", "nabo", "cogumelo", "escarola", "couve-flor", "repolho", "mostarda",
+        "bok choy", "pak choy", "brócolis-chinês", "pimenta", "pimenta-do-reino", "salsinha", "coentro", "cebolinha", "dill", "manjericão"]
+
+# for item in estoque:
+#         print(item)
+
+# Usando count() para um elemento específico
+#principal = 'morango'
+
+principal = "morango"
+quantidade = estoque.count(principal)
+
+if quantidade >0:
+    print(f"'{principal}' existe no estoque e aparece {quantidade} vezes")
+else:
+    print(f"'{principal}' não está no estoque.")
+
+
+listanaorepetida = []
+for item in estoque:
+    if item not in listanaorepetida:
+        listanaorepetida.append(item)
+for item in listanaorepetida:
+    print(item,estoque.count(item))
+
+total=len(estoque)
+print("Total de itens em estoque: " + str(total))
+
+
+# 1 - o que tem no estoque?
+# 2 - quanto há de cada item?
+# 3 - tem morango? se sim, quantos?
+# 4 - total de itens
