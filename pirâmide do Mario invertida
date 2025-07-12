@@ -1,0 +1,9 @@
+linhas = int(input("informe a quantidade de linhas: "))
+alturai = linhas
+
+i = 1
+
+while i <= alturai:
+  print(i * " ", "#" * linhas)
+  i +=1
+  linhas -=1
