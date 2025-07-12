@@ -1,0 +1,13 @@
+linhas = int(input("informe a quantidade de linhas: "))
+
+# Primeira linha: (linhas - 1) e 1 bloco preenchido
+# Segunda linha: 6 espaços vazios e 2 blocos preenchidos
+# Terceira linha: 5 espaços vazios e 3 blocos preenchidos
+# ...
+# Oitava linha: 0 blocos vazios e 8 blocos preenchidos
+
+# print ("x" * 3)
+i = 1
+while i <= linhas:
+  print((linhas-i) * " ", i * "#",)
+  i += 1
