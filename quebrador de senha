@@ -1,0 +1,29 @@
+#MODELO 1
+# senha = "amarelo567"
+
+# senhas = ["azul123", "banana103", "uva859", "laranja276", "abacaxi591", "pera384", "melancia920", "coco147", 
+#           "morango638", "kiwi705", "azul319", "verde842", "vermelho205", "amarelo764", "roxo118", 
+#           "laranja530", "rosa247", "preto693", "branco081", "cinza456", "cadeira732", "mesa184", 
+#           "livro906", "janela520", "copo347", "teclado118", "celular239", "mochila671", "lampada095", 
+#           "quadro888", "porta423", "caneta710", "garrafa306", "travesseiro584", "espelho209", "sofá931", 
+#           "ventilador065", "fone728", "relógio312", "computador459", "amarelo567"]
+# tentativa = 1
+
+# for senha in senhas:
+#     if senha == "amarelo567":
+#         print("Senha hackeada: ", senha)
+#     else:
+#         print("Tentativa ", tentativa, "Senha errada, tentando novamente...")  
+#         tentativa +=1
+---------------------------------------------------------------------------------------------------    
+#MODELO 2
+
+correta = "caneta710"
+
+while True:
+    senha = str(input("Digite a senha "))
+    if senha == correta:
+        print ("Log in efetuado com sucesso")
+        break
+    else:
+        print ("Senha incorreta, informe a senha!")    
