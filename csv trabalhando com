@@ -1,0 +1,30 @@
+with open("C:/Users/crcparana/Documents/Fafa/clientes.csv", "r", encoding ="utf-8") as f:
+    header = f.readline().strip().split (";")
+    for linha in f:
+        if not linha . strip () :
+            continue 
+        campos = linha . strip () . split (";")
+        registro = dict (zip ( header , campos ))
+        print ( registro )
+
+
+
+
+
+import csv
+
+with open ("C:/Users/crcparana/Documents/Fafa/clientes.csv", newline ="", encoding ="utf -8") as f:
+    leitor = csv.DictReader(f , delimiter =";")
+    for row in leitor:
+        idade = int(row ["Idade"]) 
+        if idade >= 30:
+            print(f"{row ['Nome']} é 30+ ({ idade })")
+
+    leitor = csv.DictReader(f , delimiter =";")
+    for row in leitor:
+        salario = float(row["Salario"])
+        if salario >=5000:
+            print(f"{row ['Nome']} é classe A ({salario})")
+        else:
+            print(f"{row ['Nome']} não é classe A ({salario})")
+
