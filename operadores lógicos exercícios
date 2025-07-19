@@ -1,0 +1,279 @@
+#1 Ler um número e dizer se é positivo, negativo ou zero.
+
+# while True:
+#     num = int(input("Digite um número: "))
+
+#     if num >0:
+#         print("positivo")
+#     elif num ==0:
+#         print("zero")
+#     else:
+#         print("negativo")
+
+
+#2 Verificar se um número é par e múltiplo de 4.
+# while True:
+#     num = int(input("Informe o número: "))
+#     if num == 0:
+#         print("Erro: divisão por 0")
+#     elif num%4 == 0:
+#         print("divide por 4")
+#     else:
+#         print("não divide por 4")
+
+
+#3 Classificar temperatura: < 18 “Frio”; 18–26 “Agradável”; > 26 “Quente”.
+# while True:
+#     temperatura = float(input("Informe a temperatura: "))
+
+#     if temperatura >=26:
+#         print("Quente")
+#     elif temperatura >=18 and temperatura<26:
+#         print("Agradável")
+#     else:
+#         print("Frio")
+
+#4 Validar login (exemplo educacional): usuário = “admin” e senha = “123”.
+# while True:
+#     usuario = "admin"
+#     senha = "123"
+
+#     usuariodigitado = input("digite usuário: ")
+#     senhadigitada = input("informe a senha")
+
+#     if usuario == usuariodigitado and senha == senhadigitada:
+#         print("Log in efetuado com sucesso")
+#     else:
+#         print("Usuário ou senha incorreto")
+
+
+
+#5 Detectar se exatamente um de dois sensores está ativo (XOR).
+# while True:
+#     sensor1 = input("informe o status do sensor on/off ")
+#     if sensor1 == 'on':
+#         sensor1 = True
+#     else:
+#         sensor1 = False
+
+#     sensor2 = input("informe o status do sensor 2 ")
+#     if sensor2 == 'on':
+#        sensor2 = True
+#     else:
+#         sensor2 = False
+
+#     if sensor1 or sensor2 == True:
+#         print("Há pelo menos um sensor ativo")
+#         print()
+#     else:
+#         print("Não há nenhum sensor ativo")
+#         print()
+
+#6 Preço do ingresso (base 50): 
+    # estudante 20% off; 
+    # idade < 12 ou > 60 30% off; 
+    # se ambas as condições (estudante e > 60), aplicar somente maior desconto.
+
+# while True:
+#     inteiro = 50.00
+#     desconto20 = inteiro * 0.2
+#     desconto30 = inteiro * 0.3
+
+#     idade = int(input("idade: "))
+#     estudante = input("Estudante (s/n)")
+
+#     if estudante == "s":
+#         estudante = True
+#         print("estudante: sim")
+#     else:
+#         estudante = False
+#         print("estudante: não")
+#     print("idade: ", idade)
+    
+#     if idade<12 or idade>60:
+#         ingresso = inteiro - desconto30
+#         print("desconto 30%")
+#         print("Valor do ingresso: R$", ingresso)
+#     elif idade >=12 or idade <=60:
+#         if estudante == True:
+#             ingresso = inteiro - desconto20
+#             print("desconto 20%")
+#             print("Valor do ingresso: R$", ingresso)
+#         else:
+#             ingresso = inteiro
+#             print("desconto 00%")
+#             print("Valor do ingresso: R$", ingresso)
+#     elif idade >60:
+#         ingresso = inteiro - desconto30
+#         print("desconto 30%")
+#         print("Valor do ingresso: R$", ingresso)
+#     else:
+#         print("verificar")
+
+#7
+# while True:
+#     idade = int(input("Idade: "))
+#     tem_cnh = input("CNH s/n?")
+#     if tem_cnh == "s":
+#         tem_cnh = True
+#     else:
+#         tem_cnh = False
+        
+#     if idade >= 18 and tem_cnh :
+#         print (" Pode dirigir.")
+#     else :
+#         print ("Não pode dirigir.")
+
+# while True:
+#     estudante = input("Estudante (s/n)?")
+#     idade = int(input("Idade: "))
+
+#     if estudante == "s":
+#         estudante = True
+#     else:
+#         estudante = False
+
+#     if estudante or idade < 12:
+#         print ("Meia entrada")
+#     else :
+#         print ("Inteira")
+
+#8 Estrutura if / elif / else
+
+# while True:
+#     nota = float(input("Nota = "))
+#     if nota >= 90:
+#         conceito = "A"
+#     elif nota >= 80:
+#         conceito = "B"
+#     elif nota >= 70:
+#         conceito = "C"
+#     elif nota >= 60:
+#         conceito = "D"
+#     else:
+#         conceito = "F"
+#     print(f"Conceito = {conceito}")
+#     if conceito == "A" or conceito == "B" or conceito == "C":
+#         print("Aluno Aprovado")
+#     elif conceito == "D":
+#         print("Aluno Em Recuperação")
+#     else:
+#         print("Aluno Reprovado")
+
+
+#12.1 Ler um número e dizer se é positivo, negativo ou zero.
+# while True:
+#     num = int(input("Digíte um número: "))
+#     if num >0:
+#         print("Número positivo.")
+#     elif num == 0:
+#         print("Número = 0.")
+#     else:
+#         print("Número negativo.")
+
+#12.1 Verificar se um número é par e múltiplo de 4.
+
+while True:
+    num = int(input("Informe o número: "))
+    if num == 0:
+        print("Impossível dividir por 0.")
+        print()
+    elif num % 4 == 0:
+        print("O número é multipo de 4.")
+        print()
+    else:
+        print("O número não é múltiplo de 4.")
+        print()
+
+
+
+
+
+
+
+#12.5 Desafio Tabela-Verdade Dinâmica
+#Gerar a tabela de AND para 2 variáveis, estender para 3.
+
+# for A in [ False , True ]: #Isso cria um laço onde a variável A assume primeiro o valor False e depois True
+#     for B in [ False , True ]: #Para cada valor de A, a variável B também varia entre False e True.
+#         for C in [ False , True ]: #Para cada valor de A e para cada valor de B, a variável C também varia entre False e True.
+#             print (A , B , C, A and B and C)
+
+
+# Entradas (booleanas): porta_aberta, janela_aberta, movimento, sistema_ativado. Hora (0–23).
+# Regra: dispara se sistema_ativado e ((porta ou janela abertas) ou (movimento e horário
+# noturno)). Horário noturno: hora ≥ 22 ou hora < 6.
+
+# porta_aberta = True
+# janela_aberta = True
+# movimento = True
+# sistema_ativado = True
+# hora = 23
+# noturno = (hora<22) or (hora<6)
+# abertura = porta_aberta or janela_aberta
+# intrusao_movimento = movimento and noturno
+# alarme = sistema_ativado and (abertura or intrusao_movimento)
+# if sistema_ativado == False:
+#     print("Sistema Desativado - risco de falso Seguro")
+# print("Alarme" if alarme else "Seguro")
+
+#15 Funções all() e any()
+
+# while True:
+#     x = int(input("x = "))
+#     y = int(input("y = "))
+#     z = int(input("z = "))
+
+#     condicoes = [ x > 0 , y < 100 , z != 0]
+#     if all(condicoes):
+#         print ("Todas as condições atendidas")
+#     elif any(condicoes):
+#         print("Ao menos uma das condições foi atendida")
+#     else:
+#         print("Nenhuma condição atendida")
+    
+#17 Atividade de Encerramento
+# x = 7
+# y = 12
+# if not (x < 5 or y > 10) and ( x % 2 == 1) :
+#     print ("A")
+# elif x <= 7 and not y == 12:
+#     print ("B")
+# else :
+#     print ("C")
+
+#17.a Avaliar passo a passo e determinar a saída
+# print("Resposta: C")
+
+#17.b Reescrever usando variáveis intermediárias para clareza.
+# x = 7
+# y = 12
+
+# cond_a = (x < 5 or y > 10) 
+# cond_b = (x % 2 == 1)
+# cond_c = (x <= 7)
+# cond_d = (y == 12)
+
+# if cond_a == False and cond_b:
+#     print ("A")
+# elif cond_c and cond_d == False:
+#     print ("B")
+# else :
+#     print ("C")
+
+#17.c Aplicar De Morgan para remover o not externo da primeira condição.
+# print("A condição original é: if not (x < 5 or y > 10)")
+# print("A condição De Morgan é if not (x < 5) and not (y > 10)")
+
+#Refatorar expressão longa em variáveis intermediárias.
+
+# nota = "B"
+
+# conceitos = {
+#     'A': "Excelente",
+#     'B': "Bom",
+#     'C': "Regular"
+# }
+# conceito = conceitos.get(nota, "Nota inválida")
+# print(conceito)
+
