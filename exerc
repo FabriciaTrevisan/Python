@@ -1,0 +1,35 @@
+#  nao pode conter espaços em nenhum campo
+# - deve validar se os emails sao validos
+# - deve verificar a media de altura dos clientes
+
+import csv
+
+linhas_corretas = []
+
+with open ("C:/Users/crcparana/Documents/Fafa/clientes.csv", errors ="replace", encoding ="utf-8") as f :
+    leitor = csv.reader (f)
+    for i, linha in enumerate (leitor, start=1):
+        if not linha:
+            continue
+        # print(linha)
+        
+        try:
+            for campo in linha:
+                if ' ' in campo.replace(" ",""):
+                    print(campo)
+                    raise Exception
+                pass
+            if "@" not in linha[3] and i>1:
+                    raise Exception
+            linhas_corretas.append[linha]
+            pass
+
+        except Exception as e :
+            print (f"[WARN] linha {i} com erro: {e}")
+            print (linha[3])
+
+with open ("C:/Users/crcparana/Documents/Fafa/meu_novo_arquivo.csv", "w", newline="", encoding ="utf-8") as saida: 
+    escritor = csv.writer(saida)
+    escritor.writerows(linhas_validas)
+
+print("✅ Arquivo 'clientes_filtrado.csv' salvo com sucesso!")
