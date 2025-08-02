@@ -1,0 +1,46 @@
+import math
+
+while True:
+    calcular = input("Olá, bem vindo a nossa calculadora! \n\nInforme a ação desejada:\n\n" \
+    "   'C' = continuar e \n" \
+    "   'S' = sair: ")  
+    
+    if calcular.upper() == 'S':
+        break
+    elif calcular.upper()!= 'S' and calcular.upper() != 'C':
+        print("Opção inválida.")
+        break
+    else:
+        try:
+            n1 = float(input("Digite N1: "))
+            operacao = input("Escolha operação: +, -, *, /, r (raiz quadrada), p (potência)")
+            if operacao.upper() == 'R':
+                resultado = math.sqrt(n1)
+                print (f"Raiz quadrada de {n1} é {resultado}.")
+
+            elif operacao.upper() == 'P':
+                n2 = int(input("digite expoente: "))
+                resultado = math.pow(n1,n2)
+                print (f"{n1} ^ {n2} = {resultado}")
+            else:
+                try:
+                    n2 = float(input("digite N2: "))
+                    if operacao == '+':
+                        resultado = n1 + n2
+                    elif operacao =='-':
+                        resultado = n1 - n2
+                    elif operacao == '*':
+                        resultado = n1 * n2
+                    elif operacao == '/':
+                        resultado = n1 / n2
+                    else:
+                        print("Operação inválida!")
+                        
+                except Exception:
+                    print("Erro try operação")
+                    break
+        except Exception:
+                print("Erro Try números!")
+                break
+
+    print(f"resultado é {round(resultado)}. \n")
